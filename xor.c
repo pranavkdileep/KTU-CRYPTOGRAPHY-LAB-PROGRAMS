@@ -7,12 +7,12 @@ int main()
     scanf("%s",message);
     for(int i =0;message[i] != '\0';i++)
     {
-        message[i] = message[i] ^ 10;
+        message[i] = message[i] ^ 0;
     }
     printf("XOR: %s\n",message);
     for(int i =0;message[i] != '\0';i++)
     {
-        message[i] = message[i] ^ 10;
+        message[i] = message[i] ^ 0;
     }
     printf("Original: %s\n",message);
     return 0;

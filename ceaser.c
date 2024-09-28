@@ -7,7 +7,7 @@ void main() {
     int shift, k;
 
     printf("\n Enter your string\n");
-    fgets(instr, sizeof(instr), stdin);  // Use fgets to read a full line
+    fgets(instr, sizeof(instr), stdin); 
 
     printf("\n Enter your key\n");
     scanf("%d", &shift);
@@ -16,23 +16,23 @@ void main() {
 
     // Encryption
     for (k = 0; instr[k] != '\0'; k++) {
-        char aa = tolower(instr[k]);  // Convert to lowercase
-        if (aa >= 'a' && aa <= 'z') { // Only shift alphabetic characters
+        char aa = tolower(instr[k]); 
+        if (aa >= 'a' && aa <= 'z') { 
             aa = ((aa - 'a' + shift) % 26) + 'a';
         }
         crypt[k] = aa;
     }
-    crypt[k] = '\0'; // Null-terminate the encrypted string
+    crypt[k] = '\0'; 
     printf("\nEncrypted string is: %s", crypt);
 
     // Decryption
     for (k = 0; crypt[k] != '\0'; k++) {
         char aa = crypt[k];
-        if (aa >= 'a' && aa <= 'z') { // Only shift alphabetic characters
-            aa = ((aa - 'a' - shift + 26) % 26) + 'a';  // Handle negative shifts
+        if (aa >= 'a' && aa <= 'z') { 
+            aa = ((aa - 'a' - shift + 26) % 26) + 'a';  
         }
         decrypt[k] = aa;
     }
-    decrypt[k] = '\0'; // Null-terminate the decrypted string
+    decrypt[k] = '\0'; 
     printf("\nDecrypted string is: %s", decrypt);
 }
