@@ -14,22 +14,14 @@ void perform_operation(char *str, char op) {
 }
 
 int main() {
-    char str[50], str1[50];
-
-    printf("Enter the string: ");
-    scanf("%s", str1);
-
-    strcpy(str, str1);
+    char str[] = "Hello World";
     perform_operation(str, 'X');
-    printf("XOR Encrypted string: %s\n", str);
-
-    strcpy(str, str1);
+    printf("XOR: %s\n", str);
+    strcpy(str, "Hello World");
     perform_operation(str, 'A');
-    printf("AND Encrypted string: %s\n", str);
-
-    strcpy(str, str1);
+    printf("AND: %s\n", str);
+    strcpy(str, "Hello World");
     perform_operation(str, 'O');
-    printf("OR Encrypted string: %s\n", str);
-
+    printf("OR: %s\n", str);
     return 0;
 }

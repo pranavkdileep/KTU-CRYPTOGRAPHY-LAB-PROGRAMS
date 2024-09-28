@@ -2,9 +2,7 @@
 
 int main()
 {
-    char message[100];
-    printf("Enter the message: ");
-    scanf("%s",message);
+    char message[] = "Hello World";
     for(int i =0;message[i] != '\0';i++)
     {
         message[i] = message[i] ^ 0;
