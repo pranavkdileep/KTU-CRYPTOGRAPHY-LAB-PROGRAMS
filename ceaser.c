@@ -2,7 +2,7 @@
 #include <ctype.h>
 #include <string.h>
 
-void main() {
+int main() {
     char instr[100], crypt[100], decrypt[100];
     int shift, k;
 
